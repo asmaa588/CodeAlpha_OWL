@@ -1,0 +1,24 @@
+Network Sniffer Results
+Date: 2026-01-01 00:00:00
+
+==================================================
+⏰ Time      : 00:00:01
+🔹 Protocol  : TCP
+🔹 Source IP : 10.0.0.1
+🔹 Dest IP   : 8.8.8.8
+🔹 Src Port  : 443
+🔹 Dst Port  : 52341
+
+==================================================
+⏰ Time      : 00:00:02
+🔹 Protocol  : UDP
+🔹 Source IP : 10.0.0.1
+🔹 Dest IP   : 1.1.1.1
+
+==================================================
+⏰ Time      : 00:00:03
+🔹 Protocol  : TCP
+🔹 Source IP : 8.8.8.8
+🔹 Dest IP   : 10.0.0.1
+🔹 Src Port  : 52341
+🔹 Dst Port  : 443
