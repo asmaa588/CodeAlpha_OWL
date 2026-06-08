@@ -1,0 +1,27 @@
+Security Analysis Report
+========================================
+
+[🔴 CRITICAL] VULN-001: SQL Injection
+Line(s): [29]
+Issue: User input directly concatenated into SQL query
+Fix: Use parameterized queries: cursor.execute('SELECT * FROM users WHERE username = ?', (username,))
+
+[🔴 CRITICAL] VULN-002: Hardcoded Credentials
+Line(s): [14, 15]
+Issue: Sensitive credentials hardcoded in source code
+Fix: Use environment variables: os.environ.get('SECRET_KEY')
+
+[🟠 HIGH] VULN-003: Weak Cryptography
+Line(s): [19]
+Issue: MD5/SHA1 are cryptographically broken for passwords
+Fix: Use bcrypt or hashlib.sha256/sha512 with salt
+
+[🔴 CRITICAL] VULN-004: Command Injection
+Line(s): [23]
+Issue: User input passed directly to system command
+Fix: Use subprocess with list args: subprocess.run(['ping', '-c', '1', host], shell=False)
+
+[🟠 HIGH] VULN-005: Missing Input Validation
+Line(s): [29]
+Issue: No sanitization or validation of user input before DB insert
+Fix: Validate input length, type, and format before processing
